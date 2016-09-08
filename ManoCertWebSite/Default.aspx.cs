@@ -21,6 +21,10 @@ namespace ManoCertWebSite
         protected void btnQuickTest_Click(object sender, EventArgs e)
         {
             SimulateUrlVisit();
+
+            var x = 3;
+            var y = 4;
+            var z = x + y;
         }
         protected void btnRandomNumber_Click(object sender, EventArgs e)
         {
@@ -52,7 +56,6 @@ namespace ManoCertWebSite
             {
                 for (int i = 0; i < 20; i++)
                 {
-                    var x = "hej";
 
                     string result = reader.ReadToEnd();
                     // Process the response text if you need to...
