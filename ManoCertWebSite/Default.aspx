@@ -18,7 +18,9 @@
         <asp:Button ID="btnMySettings" runat="server" class="btn btn-primary btn-md" Text="AppSettings_MySettings" OnClick="btnMySettings_Click" />
         <asp:Label ID="lblMySettings" runat="server" Text="ej hämtat"></asp:Label>
     </div>
-
+    <div>
+        <p>Lite text i en p-tag</p>
+    </div>
 </asp:Content>
 
 
