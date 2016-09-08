@@ -27,6 +27,7 @@ namespace ManoCertWebSite
             var z = x + y;
 
             var super = "super";
+            var batman = "batman";
         }
         protected void btnRandomNumber_Click(object sender, EventArgs e)
         {
