@@ -52,7 +52,7 @@ namespace ManoCertWebSite
             {
                 for (int i = 0; i < 20; i++)
                 {
-
+                    var x = "hej";
 
                     string result = reader.ReadToEnd();
                     // Process the response text if you need to...
