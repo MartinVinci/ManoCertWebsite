@@ -20,7 +20,10 @@ namespace ManoCertWebSite
 
         protected void btnQuickTest_Click(object sender, EventArgs e)
         {
+            int a = 0;
+            int b = 3;
 
+            int c = b / a;
 
         }
         protected void btnRandomNumber_Click(object sender, EventArgs e)

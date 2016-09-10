@@ -3,7 +3,7 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <div class="jumbotron">
-        <p class="lead">Version: 1.5</p>
+        <p class="lead">Version: 1.6</p>
     </div>
 
     <div class="row margin-below">
