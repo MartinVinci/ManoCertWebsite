@@ -20,14 +20,8 @@ namespace ManoCertWebSite
 
         protected void btnQuickTest_Click(object sender, EventArgs e)
         {
-            SimulateUrlVisit();
 
-            var x = 3;
-            var y = 4;
-            var z = x + y;
 
-            var super = "super";
-            var batman = "batman";
         }
         protected void btnRandomNumber_Click(object sender, EventArgs e)
         {
@@ -45,7 +39,7 @@ namespace ManoCertWebSite
 
 
 
-        //----------------------------------------------------------
+        //----- BELOW IS USED FOR QUICK TESTS-----------------------------------------------------
         private void SimulateUrlVisit()
         {
             //HttpWebRequest request = (HttpWebRequest)WebRequest.Create("http://externalsite.com?id=12345&sessionid=abc123");
