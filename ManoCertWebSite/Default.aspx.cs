@@ -28,9 +28,19 @@ namespace ManoCertWebSite
         }
         protected void btnRandomNumber_Click(object sender, EventArgs e)
         {
+
+
+
             Random rand = new Random();
 
-            lblRandomNumber.Text = rand.Next(1, 100).ToString();
+            var a = rand.Next(1, 100).ToString();
+            var b = Request.ServerVariables["LOCAL_ADDR"];
+
+            lblRandomNumber.Text = a + "_" + b;
+
+
+
+
         }
         protected void btnMySettings_Click(object sender, EventArgs e)
         {

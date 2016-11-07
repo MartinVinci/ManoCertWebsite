@@ -3,24 +3,22 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <div class="jumbotron">
-        <p class="lead">Version: 1.6</p>
+        <p class="lead">Version: 1.7</p>
     </div>
 
-    <div class="row margin-below">
+    <div class="margin-below">
         <asp:Button ID="btnQuickTest" runat="server" class="btn btn-primary btn-md" Text="Quick Test" OnClick="btnQuickTest_Click" />
         <asp:Label ID="lblQuickTest" runat="server" Text="ej tryckt på knapp"></asp:Label>
     </div>
-    <div class="row margin-below">
+    <div class="margin-below">
         <asp:Button ID="btnRandomNumber" runat="server" class="btn btn-primary btn-md" Text="Slumpa siffra" OnClick="btnRandomNumber_Click" />
         <asp:Label ID="lblRandomNumber" runat="server" Text="0"></asp:Label>
     </div>
-    <div class="row margin-below">
+    <div class="margin-below">
         <asp:Button ID="btnMySettings" runat="server" class="btn btn-primary btn-md" Text="AppSettings_MySettings" OnClick="btnMySettings_Click" />
         <asp:Label ID="lblMySettings" runat="server" Text="ej hämtat"></asp:Label>
     </div>
-    <div>
-        <p>Lite text i en p-tag</p>
-    </div>
+   
 </asp:Content>
 
 
