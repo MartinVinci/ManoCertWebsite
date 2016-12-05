@@ -17,9 +17,12 @@ namespace HandleStorage
         {
             //InsertRecords();
 
-            GettingRecords();
+            //GettingRecords();
 
-            UpdateRecord();
+            //UpdateRecord();
+            ListTables();
+
+            Console.WriteLine("DONE");
             Console.ReadLine();
         }
 
@@ -36,11 +39,18 @@ namespace HandleStorage
             }
         }
 
-        private static CloudTable GetCloudTable()
+        private static CloudTableClient GetTableClient()
         {
             var storageAccount = CloudStorageAccount.Parse(ConfigurationManager.AppSettings["StorageConnectionString"]);
 
             CloudTableClient tableClient = storageAccount.CreateCloudTableClient();
+
+            return tableClient;
+        }
+        private static CloudTable GetCloudTable()
+        {
+            var tableClient = GetTableClient();
+
             CloudTable table = tableClient.GetTableReference("customers");
             table.CreateIfNotExists();
 
@@ -115,5 +125,20 @@ namespace HandleStorage
             }
         }
 
+
+        private static void ListTables()
+        {
+            var tableClient = GetTableClient();
+
+            IEnumerable<CloudTable> tables = tableClient.ListTables();
+
+            List<CloudTable> listTable = tables.ToList();
+
+            foreach (CloudTable table in tables)
+            {
+
+                //table.DehleteIfExists();
+            }
+        }
     }
 }
