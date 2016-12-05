@@ -11,8 +11,11 @@ namespace HandleStorage
         static void Main(string[] args)
         {
             //BlobClass.BlobMain();
-            //TableClass.TableMain();
-            QueueClass.QueueMain();
+            TableClass.TableMain();
+            //QueueClass.QueueMain();
+
+            Console.WriteLine("Inget görs...");
+            Console.ReadLine();
 
         }
     }
