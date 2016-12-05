@@ -3,9 +3,12 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <div class="jumbotron">
-        <p class="lead">Version: 1.7</p>
+        <p class="lead">Version: 2.1</p>
     </div>
-
+    <div>
+        <%--         <img src="https://manobranch.blob.core.windows.net/files/myblob" class="image-super" > --%>
+        <img src="https://manobranch.blob.core.windows.net/images/turtle.jpg" class="image-super">
+    </div>
     <div class="margin-below">
         <asp:Button ID="btnQuickTest" runat="server" class="btn btn-primary btn-md" Text="Quick Test" OnClick="btnQuickTest_Click" />
         <asp:Label ID="lblQuickTest" runat="server" Text="ej tryckt på knapp"></asp:Label>
@@ -18,7 +21,7 @@
         <asp:Button ID="btnMySettings" runat="server" class="btn btn-primary btn-md" Text="AppSettings_MySettings" OnClick="btnMySettings_Click" />
         <asp:Label ID="lblMySettings" runat="server" Text="ej hämtat"></asp:Label>
     </div>
-   
+
 </asp:Content>
 
 
