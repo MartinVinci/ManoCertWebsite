@@ -3,7 +3,7 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <div class="jumbotron">
-        <p class="lead">Version: 2.1</p>
+        <p class="lead">Version: 2.2 David</p>
     </div>
     <div>
         <%--         <img src="https://manobranch.blob.core.windows.net/files/myblob" class="image-super" > --%>
@@ -21,7 +21,12 @@
         <asp:Button ID="btnMySettings" runat="server" class="btn btn-primary btn-md" Text="AppSettings_MySettings" OnClick="btnMySettings_Click" />
         <asp:Label ID="lblMySettings" runat="server" Text="ej hämtat"></asp:Label>
     </div>
+    <div class="margin-below">
+        <asp:Label ID="lblTrySettingsFromAzure" runat="server" Text="Default text Azure"></asp:Label>
+        <br/>
+        <asp:Label ID="lblTrySettingsFromLocal" runat="server" Text="Default text Local"></asp:Label>
 
+    </div>
 </asp:Content>
 
 

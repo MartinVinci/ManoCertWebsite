@@ -8,6 +8,7 @@ using System.Net;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Diagnostics;
 
 namespace ManoCertWebSite
 {
@@ -15,15 +16,22 @@ namespace ManoCertWebSite
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            CustomInitialization();
+        }
+        private void CustomInitialization()
+        {
+            var azureSetting = Environment.GetEnvironmentVariable("APPSETTING_timKey");
+            lblTrySettingsFromAzure.Text = azureSetting != null ? azureSetting : "NULL";
 
+            
+            lblTrySettingsFromLocal.Text = ConfigurationManager.AppSettings["timKey"];
+
+            
         }
 
         protected void btnQuickTest_Click(object sender, EventArgs e)
         {
-            int a = 0;
-            int b = 3;
-
-            int c = b / a;
+            Trace.Warn("Nu skriver jag tracelogging");
 
         }
         protected void btnRandomNumber_Click(object sender, EventArgs e)

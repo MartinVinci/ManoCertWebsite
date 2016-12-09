@@ -217,6 +217,7 @@
     <Content Include="Images\Cars\red.jpg" />
     <Content Include="Images\Cartoons\mickey.jpg" />
     <Content Include="Images\Cartoons\woody.jpg" />
+    <Content Include="OchTaMedDigEnKaka.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -401,6 +402,13 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="OchTaMedDigEnKaka.aspx.cs">
+      <DependentUpon>OchTaMedDigEnKaka.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OchTaMedDigEnKaka.aspx.designer.cs">
+      <DependentUpon>OchTaMedDigEnKaka.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
