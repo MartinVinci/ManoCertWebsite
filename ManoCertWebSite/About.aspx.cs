@@ -23,9 +23,14 @@ namespace ManoCertWebSite
         }
         private static void AlertWebhook()
         {
+            var browser = HttpContext.Current.Request.ServerVariables["HTTP_USER_AGENT"];
+            var localAddr = HttpContext.Current.Request.ServerVariables["LOCAL_ADDR"];
+
             string sURL;
-            sURL = @"https://allstarfunction.azurewebsites.net/api/HttpTriggerCSharp1?code=jUVJFswk2tnt9gDvKmTvKmuJmP8sXlF4yrmLNJxTwSxa1wwJ6pukkA==&name=Martin";
+            sURL = @"https://allstarfunction.azurewebsites.net/api/HttpTriggerCSharp1?code=jUVJFswk2tnt9gDvKmTvKmuJmP8sXlF4yrmLNJxTwSxa1wwJ6pukkA==&name=";
+
             sURL += RandomNumber(999);
+            sURL += localAddr;
 
             WebRequest wrGETURL;
             wrGETURL = WebRequest.Create(sURL);
@@ -38,8 +43,8 @@ namespace ManoCertWebSite
             Stream objStream;
             objStream = wrGETURL.GetResponse().GetResponseStream();
 
-           
-            
+
+
         }
     }
 }
