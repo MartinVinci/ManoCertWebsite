@@ -3,7 +3,7 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <div class="jumbotron">
-        <p class="lead">Version: 2.2 David</p>
+        <p class="lead">Version: 2.3</p>
     </div>
     <div>
         <%--         <img src="https://manobranch.blob.core.windows.net/files/myblob" class="image-super" > --%>
