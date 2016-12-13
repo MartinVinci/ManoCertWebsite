@@ -13,13 +13,16 @@ namespace HandleStorage
     {
         private static string WORKERQUEUE = "workerqueue";
         private static string TESTQUEUE = "testqueue";
+        private static string WEBJOBQUEUE = "webjobqueue";
+        private static string FILEPROCCESSING = "fileprocessing";
+
 
         public static void QueueMain()
         {
-            AddMessages2();
+            //AddMessages2();
             //ProcessMessages();
 
-            //ProcessBatchMessages();
+            ProcessBatchMessages();
 
             //Console.WriteLine("");
             //Console.WriteLine("-----------------");
@@ -34,13 +37,26 @@ namespace HandleStorage
 
         private static void ProcessBatchMessages()
         {
-            var queue = GetCloudQueue(TESTQUEUE);
+            var queue = GetCloudQueue(FILEPROCCESSING);
 
-            IEnumerable<CloudQueueMessage> batch = queue.GetMessages(4, new TimeSpan(0, 0, 30));
+            IEnumerable<CloudQueueMessage> batch = queue.GetMessages(10, new TimeSpan(0, 0, 5));
+
+            queue.FetchAttributes();
+
+            Console.WriteLine(queue.ApproximateMessageCount.ToString());
 
             foreach (CloudQueueMessage batchMessage in batch)
             {
+                if (batchMessage.AsString.ToString().StartsWith("START"))
+                {
+                    Console.ForegroundColor = ConsoleColor.Green;
+                }
+                else if (batchMessage.AsString.ToString().StartsWith("STOP"))
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                }
                 Console.WriteLine(batchMessage.AsString);
+                Console.ForegroundColor = ConsoleColor.Gray;
             }
 
 
@@ -48,13 +64,13 @@ namespace HandleStorage
 
         private static void ProcessMessages()
         {
-            var queue = GetCloudQueue(TESTQUEUE);
+            var queue = GetCloudQueue(FILEPROCCESSING);
             queue.FetchAttributes();
 
             int? count = queue.ApproximateMessageCount;
 
 
-            CloudQueueMessage message = queue.GetMessage(new TimeSpan(0, 0, 30));
+            CloudQueueMessage message = queue.GetMessage(new TimeSpan(0, 0, 10));
 
             if(message != null)
             {
